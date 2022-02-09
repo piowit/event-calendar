@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>descriptions</th>
+      <th>dateStart</th>
+      <th>dateEnd</th>
+      <th>free</th>
+      <th>website</th>
+      <th>picture</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.descriptions %></td>
+        <td><%= event.dateStart %></td>
+        <td><%= event.dateEnd %></td>
+        <td><%= event.free %></td>
+        <td><%= event.webpage %></td>
+        <td><% event.picture %><%= image_tag event.picture %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
